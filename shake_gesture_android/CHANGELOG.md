@@ -1,3 +1,7 @@
+## 2.1.1
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
 ## 2.1.0
 
  - **FEAT**(android): migrate to built-in Kotlin (#29).

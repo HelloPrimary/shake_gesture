@@ -1,3 +1,7 @@
+## 1.0.2
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
 ## 1.0.1
 
 ## 0.1.1

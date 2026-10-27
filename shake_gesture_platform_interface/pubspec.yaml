@@ -1,6 +1,6 @@
 name: shake_gesture_platform_interface
 description: A common platform interface for the shake_gesture plugin.
-version: 1.0.1
+version: 1.0.2
 homepage: https://github.com/HelloPrimary/shake_gesture
 repository: https://github.com/HelloPrimary/shake_gesture
 

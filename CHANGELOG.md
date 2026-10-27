@@ -3,6 +3,47 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## 2026-10-27
+
+### Changes
+
+---
+
+Packages with breaking changes:
+
+ - There are no breaking changes in this release.
+
+Packages with other changes:
+
+ - [`shake_gesture` - `v2.2.1`](#shake_gesture---v221)
+ - [`shake_gesture_android` - `v2.1.1`](#shake_gesture_android---v211)
+ - [`shake_gesture_ios` - `v1.1.1`](#shake_gesture_ios---v111)
+ - [`shake_gesture_platform_interface` - `v1.0.2`](#shake_gesture_platform_interface---v102)
+ - [`shake_gesture_test_helper` - `v2.2.1`](#shake_gesture_test_helper---v221)
+
+---
+
+#### `shake_gesture` - `v2.2.1`
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
+#### `shake_gesture_android` - `v2.1.1`
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
+#### `shake_gesture_ios` - `v1.1.1`
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
+#### `shake_gesture_platform_interface` - `v1.0.2`
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
+#### `shake_gesture_test_helper` - `v2.2.1`
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
+
 ## 2026-09-28
 
 ### Changes

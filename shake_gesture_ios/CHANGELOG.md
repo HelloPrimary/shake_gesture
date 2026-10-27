@@ -1,3 +1,7 @@
+## 1.1.1
+
+ - **FIX**: update repository URLs to HelloPrimary.
+
 ## 1.1.0
 
  - **FIX**(ios): support UISceneDelegate window detection for shake events.
