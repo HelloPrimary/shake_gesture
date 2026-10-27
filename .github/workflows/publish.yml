@@ -25,6 +25,13 @@ jobs:
         run: flutter pub get
       - name: Restore files rewritten by flutter pub get
         run: git checkout -- .
+      - name: Authenticate with pub.dev (OIDC)
+        run: |
+          PUB_TOKEN=$(curl -sS -H "Authorization: bearer $ACTIONS_ID_TOKEN_REQUEST_TOKEN" \
+            "$ACTIONS_ID_TOKEN_REQUEST_URL&audience=https://pub.dev" | jq -r '.value')
+          echo "::add-mask::$PUB_TOKEN"
+          echo "PUB_TOKEN=$PUB_TOKEN" >> "$GITHUB_ENV"
+          flutter pub token add https://pub.dev --env-var PUB_TOKEN
       - name: Publish
         working-directory: ${{ env.PACKAGE_DIR }}
         run: flutter pub publish --force
