@@ -1,0 +1,31 @@
+name: Publish to pub.dev
+
+# Tags look like <package>-v<version>, e.g. shake_gesture_ios-v1.1.1.
+# NB: GitHub does not trigger workflows when more than 3 tags are pushed at once.
+on:
+  push:
+    tags:
+      - "*-v[0-9]+.[0-9]+.[0-9]+*"
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    environment: pub.dev
+    permissions:
+      contents: read
+      id-token: write # required for OIDC authentication with pub.dev
+    steps:
+      - uses: actions/checkout@v4
+      - uses: subosito/flutter-action@v2
+        with:
+          channel: stable
+      - name: Resolve package directory
+        run: echo "PACKAGE_DIR=${GITHUB_REF_NAME%-v*}" >> "$GITHUB_ENV"
+      - name: Install dependencies
+        run: flutter pub get
+      - name: Publish (dry run)
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: flutter pub publish --dry-run
+      - name: Publish
+        working-directory: ${{ env.PACKAGE_DIR }}
+        run: flutter pub publish --force
