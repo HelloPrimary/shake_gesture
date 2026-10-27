@@ -47,3 +47,4 @@ build/
 .project
 .classpath
 .settings
+.pixel/
