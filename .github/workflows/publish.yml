@@ -15,7 +15,7 @@ jobs:
       contents: read
       id-token: write # required for OIDC authentication with pub.dev
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: subosito/flutter-action@v2
         with:
           channel: stable
